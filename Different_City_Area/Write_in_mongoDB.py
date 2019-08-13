@@ -1,7 +1,7 @@
-import pymongo
+import pymongo  # 数据库操作第三方库
 
 
-client = pymongo.MongoClient(host='localhost', port=27017)
+client = pymongo.MongoClient(host='localhost', port=27017)  # 链接我电脑上的数据库
 
 def write_in_mongoDB(Xiaoqu_list, keyword, name):
     city = keyword + "房价"

@@ -1,5 +1,5 @@
 import matplotlib  # 画图的库，数据可视化，
-import matplotlib.pyplot as plt  # as是取个别名，之后方便使用
+import matplotlib.pyplot as plt  # as是取个别名，之后方便使用，之后plt.···都是使用的matplotlib.pyplot内置的方法
 import numpy as np  # numpy数据处理库
 
 
@@ -67,12 +67,12 @@ def draw_line_chart(Time_list, keyword):  # 函数定义方法，参数不用设
     string = keyword + '房价时间分布'  # 字符串相加，合并为一个长字符串
     plt.plot(Price, label=string)  # 绘图，Price是每个点对应的数据，label是图例
 
-    plt.legend()
-    ax.set_ylabel('价格（元/平方米）')
-    ax.set_title(string)
+    plt.legend()  # 将图例应用
+    ax.set_ylabel('价格（元/平方米）')  # 设置y轴的说明
+    ax.set_title(string)  # 设置x轴的说明
 
-    if fit == '是':
-        plt.savefig(string + '及函数拟合.jpg')
+    if fit == '是':  # if语句判断，控制保存名称
+        plt.savefig(string + '及函数拟合.jpg')  # plt.savefig()保存图像，是plt内置的方法
     else:
         plt.savefig(string + '.jpg')
     plt.show()
